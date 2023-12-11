@@ -1,6 +1,7 @@
+import { env } from "@/lib/utils"
 import { type CookieOptions, createServerClient } from "@supabase/ssr"
 import { type NextRequest, NextResponse } from "next/server"
-import { z } from "zod"
+import "server-only"
 
 export const createClient = (request: NextRequest) => {
   // Create an unmodified response
@@ -11,8 +12,8 @@ export const createClient = (request: NextRequest) => {
   })
 
   const supabase = createServerClient(
-    z.string().parse(process.env.NEXT_PUBLIC_SUPABASE_URL),
-    z.string().parse(process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY),
+    env("NEXT_PUBLIC_SUPABASE_URL"),
+    env("NEXT_PUBLIC_SUPABASE_ANON_KEY"),
     {
       cookies: {
         get(name: string) {

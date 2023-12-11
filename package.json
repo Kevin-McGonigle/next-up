@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "latest",
+    "@supabase/ssr": "latest",
+    "@supabase/supabase-js": "latest",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
@@ -19,6 +21,7 @@
     "@typescript-eslint/parser": "latest",
     "autoprefixer": "latest",
     "class-variance-authority": "latest",
+    "client-only": "latest",
     "clsx": "latest",
     "eslint": "latest",
     "eslint-config-next": "latest",
@@ -32,12 +35,12 @@
     "prettier": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "@supabase/ssr": "latest",
-    "@supabase/supabase-js": "latest",
+    "server-only": "latest",
     "tailwind-merge": "latest",
     "tailwindcss": "latest",
     "tailwindcss-animate": "latest",
     "typescript": "latest",
-    "zod": "latest"
+    "zod": "latest",
+    "zod-validation-error": "latest"
   }
 }
